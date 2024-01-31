@@ -1,0 +1,317 @@
+/*
+Filename: style.css
+
+Path: eventsManage/client/src/style.css
+
+Code: Css for the application styling and layout of the application.
+*/
+
+/* General styles */
+body {
+  background: linear-gradient(90deg, rgba(8,0,143,1) 0%, rgba(37,37,203,1) 24%, rgba(0,212,255,1) 100%);
+  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1;
+  margin: 10px;
+  padding: 10px;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* Container styles */
+div {
+  margin: 0 auto;
+  padding: 10px;
+  width: auto;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Navigation links */
+nav a {
+  color: #fff;
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #0088cc;
+}
+
+/* Global button styling */
+button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  div {
+      padding: 10px;
+      width: 100%;
+  }
+}
+
+/* Component Specific Styles */
+/* Home.js css */
+.Home {
+  background-image: url('./components/Event.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  text-align: center;
+}
+
+/* Admin section */
+.Admin {
+  margin: 1px;
+}
+
+.discoverEvents, .uploadEvents {
+  color: #ffffff;
+  font-size: 1.5em;
+  margin: 0.5em;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.uploadEvents {
+  font-size: 100px;
+  margin: 0.5px;
+}
+
+/* User section */
+.User, .Register, .Manage {
+  margin: 1px;
+  padding: 10px;
+  text-align: left;
+}
+
+.Register {
+  color: #f8f8f8;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.Manage {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Main Events heading */
+.events, .manage {
+  color: #333;
+  font-size: 50px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Container for all events */
+.find-container, .EventList {
+  margin: 10px;
+  max-width: auto;
+  padding: 10px;
+}
+
+.EventList {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual event container */
+.event {
+  border: 5px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.event-img {
+  max-width: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.event-details {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.event-details-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+/* Event title */
+.event-details h3, .EventTitle {
+  color: #333;
+  font-size: 15px;
+}
+
+.EventTitle {
+  font-size: 1.25em;
+  margin: 0.5em 0;
+}
+
+/* Event information text */
+.event-details p, .EventDetails {
+  color: #666;
+  margin: 25px;
+}
+
+.EventDetails {
+  font-size: 1em;
+}
+
+/* Event action button */
+.EventActionButton {
+  background-color: #00aaff;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.EventActionButton:hover {
+  background-color: #0088cc;
+}
+
+/* Manage css */
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+button.edit {
+  background-color: #ffa500;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 10px;
+  margin: 10px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+button.edit:hover {
+  background-color: #cc8400;
+}
+
+/* Signup & User Login */
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2em auto;
+  max-width: 400px;
+  padding: 1em;
+}
+
+.signup-header, .login-header {
+  color: #333;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form select {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding: 0.75em;
+}
+
+form select {
+  background-color: #f8f8f8;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-position-x: 95%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+}
+
+button.submit {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  margin: 1em auto;
+  padding: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button.submit:hover {
+  background-color: #388e3c;
+}
+
+button.submit {
+  background-color: #008CBA;
+}
+
+button.submit:hover {
+  background-color: #005f73;
+}
+
+/* Responsive adjustments for the event list */
+@media screen and (max-width: 600px) {
+  .EventList, .container {
+      margin: 1em;
+  }
+
+  .EventTitle {
+      font-size: 1em;
+  }
+}
+
+/* General responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+      margin: 1em;
+  }
+}
