@@ -69,7 +69,8 @@ const ManageAdd = () => {
 
     try {
       // Send a request to the server to add the event
-      const response = await fetch("http://localhost:5000/manage/add", {
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000"; // Use environment variable
+      const response = await fetch(`${apiUrl}/manage/add`, { // Adjusted for dynamic API URL
         method: "POST",
         headers: {
           "Content-Type": "application/json",

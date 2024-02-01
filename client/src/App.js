@@ -12,7 +12,7 @@ of the client application.
 
 // Code dependencies
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import UserLogin from "./components/UserLogin";
 import AdminLogin from "./components/AdminLogin";
@@ -40,24 +40,24 @@ function App() {
               className="collapse navbar-collapse"
             >
               <div className="navbar-nav">
-                <a className="nav-link" aria-current="page" href="/">
+                <Link className="nav-link" aria-current="page" to="/">
                   Home
-                </a>
-                <a className="nav-link" href="/user-login">
+                </Link>
+                <Link className="nav-link" to="/user-login">
                   User Login
-                </a>
-                <a className="nav-link" href="/admin-login">
+                </Link>
+                <Link className="nav-link" to="/admin-login">
                   Admin Login
-                </a>
-                <a className="nav-link" href="/signup">
+                </Link>
+                <Link className="nav-link" to="/signup">
                   Sign Up
-                </a>
-                <a className="nav-link" href="/manage">
+                </Link>
+                <Link className="nav-link" to="/manage">
                   Manage
-                </a>
-                <a className="nav-link" href="/find">
+                </Link>
+                <Link className="nav-link" to="/find">
                   Find
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -31,7 +31,8 @@ const ManageEdit = () => {
 
   useEffect(() => {
     // Fetch event data for editing
-    fetch(`http://localhost:5000/manage/edit/${_id}`, {
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+    fetch(`${apiUrl}/manage/edit/${_id}`, {
       headers: {
         Authorization: `${localStorage.getItem("token")}`,
       },
@@ -56,7 +57,7 @@ const ManageEdit = () => {
   // Function to handle editing an event
   const handleEditEvent = (e) => {
     e.preventDefault();
-
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
     const eventData = {
       eventName,
       organizer,
@@ -69,7 +70,7 @@ const ManageEdit = () => {
     };
 
     // Update the event data with the PUT request
-    fetch(`http://localhost:5000/manage/edit/${_id}`, {
+    fetch(`${apiUrl}/manage/edit/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

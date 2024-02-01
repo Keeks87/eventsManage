@@ -21,6 +21,8 @@ const Manage = () => {
   const [events, setEvents] = useState([]);
   const history = useHistory();
 
+  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
   // Function to handle editing an event
   const handleEdit = (_id) => {
     history.push(`/manage/edit/${_id}`);
@@ -30,7 +32,7 @@ const Manage = () => {
   const handleDelete = async (_id) => {
     if (window.confirm("Are you sure you want to delete this event?")) {
       try {
-        const response = await fetch(`http://localhost:5000/manage/delete/${_id}`, {
+        const response = await fetch(`${apiUrl}/manage/delete/${_id}`, {
           method: 'DELETE',
           headers: {
             Authorization: localStorage.getItem("token"),
@@ -64,7 +66,7 @@ const Manage = () => {
       }
       try {
         setIsLoading(true);
-        const response = await fetch("http://localhost:5000/find/events", {
+        const response = await fetch(`${apiUrl}/find/events`, {
           headers: {
             Authorization: localStorage.getItem("token"),
           },
@@ -86,7 +88,7 @@ const Manage = () => {
 
     // Call the function on component mount and clean up on unmount
     fetchEvents();
-  }, [history]);
+  }, [history, apiUrl]);
 
   // Return the Manage component
   return (
