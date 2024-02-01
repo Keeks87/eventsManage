@@ -63,4 +63,4 @@ The Event Management App utilizes the following third-party APIs:
 
 The application has been deployed as a full-stack application. The back-end and the front-end is deployed on a cloud hosting platform Render.
 
-- [Link to Deployed App]
+- [Link to Deployed App](https://eventsmanage-front.onrender.com/)
