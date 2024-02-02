@@ -44,7 +44,7 @@ const Signup = () => {
 
       if (response.ok) {
         // Signup successful,
-        alert("Signup successful!");
+        alert("Signup successful, please login!");
         // Navigate to another page
         history.push("/");
       } else {
