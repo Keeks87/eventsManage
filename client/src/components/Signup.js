@@ -43,13 +43,16 @@ const Signup = () => {
       });
 
       if (response.ok) {
-        // Signup successful, navigate to another page
+        // Signup successful,
+        alert("Signup successful!");
+        // Navigate to another page
         history.push("/");
       } else {
         const errorData = await response.json();
         throw new Error(errorData.error);
       }
     } catch (error) {
+      alert(`Error signing up: ${error.message}`);
       console.error("Error signing up:", error);
     }
   };
