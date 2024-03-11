@@ -57,7 +57,7 @@ To ensure the security of this app, the following measures have been taken:
 The Event Management App utilizes the following third-party APIs:
 
 - MongoDB Atlas: A cloud-hosted MongoDB database. MongoDB Atlas allows you to host and manage your data in the cloud.
-- React Router: A collection of navigational components that compose declaratively with your applicat ion, letting you compose complex UIs from simple units of UI.
+- React Router: A collection of navigational components that compose declaratively with your application, letting you compose complex UIs from simple units of UI.
 
 ## Deployment
 
