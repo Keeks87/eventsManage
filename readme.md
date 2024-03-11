@@ -1,6 +1,6 @@
 # Event Management App
 
-## Description
+## Description.
 
 This is a full- stack web application that allows users to create and manage events. Users can register for events, view event details, and manage events. The application is built using the MERN stack (MongoDB, Express, React, and Node.js).
 
